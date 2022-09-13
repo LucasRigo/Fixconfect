@@ -62,3 +62,60 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Fixconfect
+
+## Classes
+-Ordem
+-Terceirizado
+-Modelo
+-Pagamento
+-Linha
+-Retrabalho
+-Aparelho
+-Processo
+
+
+## Ordem
+-id
+-terceirizado_id
+-modelo_id
+-modeloQuant
+-linha_id
+-linhaQuant
+-aparelho_id
+
+## Terceirizado
+-id
+-nome
+-telefone
+-endereco
+
+## Modelo
+-refencia
+-cor
+-tamanho
+-processo_id
+
+## Linha
+-id
+-tipo
+-cor
+
+## Processo
+-id
+-nome
+-tempo
+
+## Aparelho
+-id
+-nome
+
+## Pagamento
+-id
+-ordem_id
+
+## Retrabalho
+-id
+-referencia_id
+
