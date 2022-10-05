@@ -17,4 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('processos', 	[\App\Http\Controllers\ProcessosController::class,'index']);
+Route::get('processos', [\App\Http\Controllers\ProcessosController::class,'index']);
+Route::get('processos/create', [\App\Http\Controllers\ProcessosController::class,'create']);
+Route::post('processos/store', [\App\Http\Controllers\ProcessosController::class,'store']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
