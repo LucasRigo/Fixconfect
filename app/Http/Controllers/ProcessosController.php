@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Processo;
 use App\Http\Requests\ProcessoRequest;
+use Symfony\Component\Process\Process;
 
 class ProcessosController extends Controller
 {
@@ -20,6 +21,21 @@ class ProcessosController extends Controller
         $novo_processo = $request->all();
         Processo::create($novo_processo);
 
+        return redirect('processos');
+    }
+
+    public function destroy($id){
+        Processo::find($id)->delete();
+        return redirect('processos');
+    }
+
+    public function edit($id){
+        $processo = Processo::find($id);
+        return view('processos.edit', compact('processo'));
+    }
+
+    public function update(ProcessoRequest $request, $id){
+        Processo::find($id)->update($request->all());
         return redirect('processos');
     }
 }

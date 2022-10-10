@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('processos', [\App\Http\Controllers\ProcessosController::class,'index']);
 Route::get('processos/create', [\App\Http\Controllers\ProcessosController::class,'create']);
 Route::post('processos/store', [\App\Http\Controllers\ProcessosController::class,'store']);
+Route::get('processos/{id}/destroy', [\App\Http\Controllers\ProcessosController::class,'destroy']);
+Route::get('processos/{id}/edit', [\App\Http\Controllers\ProcessosController::class,'edit']);
+Route::put('processos/{id}/update', [\App\Http\Controllers\ProcessosController::class,'update']);
 
 Auth::routes();
 
