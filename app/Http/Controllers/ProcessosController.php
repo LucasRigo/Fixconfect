@@ -21,12 +21,12 @@ class ProcessosController extends Controller
         $novo_processo = $request->all();
         Processo::create($novo_processo);
 
-        return redirect('processos');
+        return redirect()->route('processos');
     }
 
     public function destroy($id){
         Processo::find($id)->delete();
-        return redirect('processos');
+        return redirect()->route('processos');
     }
 
     public function edit($id){
@@ -36,6 +36,6 @@ class ProcessosController extends Controller
 
     public function update(ProcessoRequest $request, $id){
         Processo::find($id)->update($request->all());
-        return redirect('processos');
+        return redirect()->route('processos');
     }
 }

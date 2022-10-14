@@ -11,7 +11,7 @@
         </ul>
     @endif
 
-    {!! Form::open(['url'=>'processos/store'])!!}
+    {!! Form::open(['route'=>'processos.store'])!!}
         <div class="form-group">
             {!! Form::label('nome', 'Nome') !!}
             {!! Form::text('nome', null, ['class'=>'form-control', 'required'])!!}

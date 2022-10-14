@@ -11,7 +11,7 @@
         </ul>
     @endif
 
-    {!! Form::open(['url'=>"processos/$processo->id/update",'method'=>'put'])!!}
+    {!! Form::open(['route'=>["processos.update", 'id'=>$processo->id],'method'=>'put'])!!}
         <div class="form-group">
             {!! Form::label('nome', 'Nome') !!}
             {!! Form::text('nome', $processo->nome, ['class'=>'form-control', 'required'])!!}

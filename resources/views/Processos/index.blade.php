@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+@extends('layouts.default')
 
 @section('content')
     <div class="col-md-12 text-center">
@@ -7,7 +7,7 @@
 
     <table class="table table-stripe table-bordered table-hover">
         <div class="col-md-12 text-left">
-            <a href='processos/create'><button type="button" class="btn btn-success">Novo</button></a>
+            <a href="{{route('processos.create', []) }}" class="btn btn-success">Novo</a>
         </div>
 
         <br>
@@ -23,8 +23,9 @@
                     <td>{{$processo->nome}}</td>
                     <td>{{$processo->tempo}}</td>
                     <td>
-                        <a href="{{route('processos.edit',['id'=>$processo->id])}}" class="btn-sm btn-success">Editar</a>
-                        <a href="{{route('processos.destroy',['id'=>$processo->id])}}" class="btn-sm btn-danger">Excluir</a>
+
+                        <a href="{{ route('processos.edit', ['id' => $processo->id]) }}" class="btn-sm btn-success">Editar</a>
+                        <a href="#" onclick="return ConfirmaExclusao({{$processo->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
                 </tr>
             
@@ -32,3 +33,7 @@
         </tbody>
     </table>
 @stop
+
+@section('table-delete')
+"processos"
+@endsection

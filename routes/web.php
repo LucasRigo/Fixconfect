@@ -17,12 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('processos', [\App\Http\Controllers\ProcessosController::class,'index']);
-Route::get('processos/create', [\App\Http\Controllers\ProcessosController::class,'create']);
-Route::post('processos/store', [\App\Http\Controllers\ProcessosController::class,'store']);
-Route::get('processos/{id}/destroy', [\App\Http\Controllers\ProcessosController::class,'destroy']);
-Route::get('processos/{id}/edit', [\App\Http\Controllers\ProcessosController::class,'edit']);
-Route::put('processos/{id}/update', [\App\Http\Controllers\ProcessosController::class,'update']);
+Route::group(['prefix'=>'processos', 'where'=>['id'=>'[0-9]+']], function(){
+
+    Route::get('',              ['as'=>'processos', 'uses'=>'\App\Http\Controllers\ProcessosController@index']);
+    Route::get('create',        ['as'=>'processos.create', 'uses'=>'\App\Http\Controllers\ProcessosController@create']);
+    Route::post('store',        ['as'=>'processos.store', 'uses'=>'\App\Http\Controllers\ProcessosController@store']);
+    Route::get('{id}/destroy',  ['as'=>'processos.destroy','uses'=>'\App\Http\Controllers\ProcessosController@destroy']);
+    Route::get('{id}/edit',     ['as'=>'processos.edit', 'uses'=>'\App\Http\Controllers\ProcessosController@edit']);
+    Route::put('{id}/update',   ['as'=>'processos.update','uses'=>'\App\Http\Controllers\ProcessosController@update']);
+
+});
 
 Auth::routes();
 
