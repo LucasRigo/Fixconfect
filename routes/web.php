@@ -28,6 +28,42 @@ Route::group(['prefix'=>'processos', 'where'=>['id'=>'[0-9]+']], function(){
 
 });
 
+
+Route::group(['prefix'=>'aparelhos', 'where'=>['id'=>'[0-9]+']], function(){
+
+    Route::get('',              ['as'=>'aparelhos', 'uses'=>'\App\Http\Controllers\AparelhosController@index']);
+    Route::get('create',        ['as'=>'aparelhos.create', 'uses'=>'\App\Http\Controllers\AparelhosController@create']);
+    Route::post('store',        ['as'=>'aparelhos.store', 'uses'=>'\App\Http\Controllers\AparelhosController@store']);
+    Route::get('{id}/destroy',  ['as'=>'aparelhos.destroy','uses'=>'\App\Http\Controllers\AparelhosController@destroy']);
+    Route::get('{id}/edit',     ['as'=>'aparelhos.edit', 'uses'=>'\App\Http\Controllers\AparelhosController@edit']);
+    Route::put('{id}/update',   ['as'=>'aparelhos.update','uses'=>'\App\Http\Controllers\AparelhosController@update']);
+
+});
+
+
+
+Route::group(['prefix'=>'linhas', 'where'=>['id'=>'[0-9]+']], function(){
+
+    Route::get('',              ['as'=>'linhas', 'uses'=>'\App\Http\Controllers\LinhasController@index']);
+    Route::get('create',        ['as'=>'linhas.create', 'uses'=>'\App\Http\Controllers\LinhasController@create']);
+    Route::post('store',        ['as'=>'linhas.store', 'uses'=>'\App\Http\Controllers\LinhasController@store']);
+    Route::get('{id}/destroy',  ['as'=>'linhas.destroy','uses'=>'\App\Http\Controllers\LinhasController@destroy']);
+    Route::get('{id}/edit',     ['as'=>'linhas.edit', 'uses'=>'\App\Http\Controllers\LinhasController@edit']);
+    Route::put('{id}/update',   ['as'=>'linhas.update','uses'=>'\App\Http\Controllers\LinhasController@update']);
+
+});
+
+Route::group(['prefix'=>'terceirizados', 'where'=>['id'=>'[0-9]+']], function(){
+
+    Route::get('',              ['as'=>'terceirizados', 'uses'=>'\App\Http\Controllers\TerceirizadosController@index']);
+    Route::get('create',        ['as'=>'terceirizados.create', 'uses'=>'\App\Http\Controllers\TerceirizadosController@create']);
+    Route::post('store',        ['as'=>'terceirizados.store', 'uses'=>'\App\Http\Controllers\TerceirizadosController@store']);
+    Route::get('{id}/destroy',  ['as'=>'terceirizados.destroy','uses'=>'\App\Http\Controllers\TerceirizadosController@destroy']);
+    Route::get('{id}/edit',     ['as'=>'terceirizados.edit', 'uses'=>'\App\Http\Controllers\TerceirizadosController@edit']);
+    Route::put('{id}/update',   ['as'=>'terceirizados.update','uses'=>'\App\Http\Controllers\TerceirizadosController@update']);
+
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

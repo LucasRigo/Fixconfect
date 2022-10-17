@@ -296,6 +296,21 @@ return [
             'url'         => 'processos',
             'icon' => 'fas fa-fw fa-users',
         ],
+        [
+            'text'         => 'Aparelhos',
+            'url'         => 'aparelhos',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text'         => 'Linhas',
+            'url'         => 'linhas',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text'         => 'Terceirizados',
+            'url'         => 'terceirizados',
+            'icon' => 'fas fa-fw fa-users',
+        ],
         
     ],
 

@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Linha extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['tipo', 'cor'];
 }
