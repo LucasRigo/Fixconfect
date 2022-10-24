@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('plugin.Sweetalert2', true)
+@section('plugins.Sweetalert2', true)
 
 @section('js')
     <script>
@@ -10,7 +10,7 @@
                 type: 'warning', showCancelButton: true, confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33', confirmButtonText: 'Sim, excluir!',
                 cancelButtonText: 'Cancelar', closeOnConfirm: false,
-            });then(function(isConfirm){
+            }).then(function(isConfirm){
               if(isConfirm.value) {
                   $.get('/'+ @yield('table-delete')+'/'+id+'/destroy', function(data){
                       swal.fire(
