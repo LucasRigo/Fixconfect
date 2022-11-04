@@ -311,6 +311,16 @@ return [
             'url'         => 'terceirizados',
             'icon' => 'fas fa-fw fa-users',
         ],
+        [
+            'text'         => 'Cores',
+            'url'         => 'cores',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text'         => 'Modelos',
+            'url'         => 'modelos',
+            'icon' => 'fas fa-fw fa-users',
+        ],
         
     ],
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModelosTable extends Migration
+class CreateModeloCorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,15 @@ class CreateModelosTable extends Migration
      */
     public function up()
     {
-        Schema::create('modelos', function (Blueprint $table) {
+        Schema::create('modelo_cors', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('referencia');
+
+            $table->bigInteger('modelo_id')->unsigned()->nullable();
+            $table->foreign('modelo_id')->references('id')->on('modelos');
+
+            $table->bigInteger('cor_id')->unsigned()->nullable();
+            $table->foreign('cor_id')->references('id')->on('cors');
+
 
             $table->timestamps();
         });
@@ -28,6 +34,6 @@ class CreateModelosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modelos');
+        Schema::dropIfExists('modelo_cors');
     }
 }
