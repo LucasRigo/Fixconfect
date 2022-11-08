@@ -62,7 +62,7 @@
             $(add_button).click(function(e){
                 x++;
 
-                var newField = '<div><div style="width:94%; float: left" id="cor">{!! Form::select("cores [1", \App\Models\Cor:: orderBy("nome")->pluck("nome", "id")->toArray(), null, ["class"=>"form-control", "required", "placeholder"=>"Selecione uma cor"]) !!}</div><button type="button" class="remove field btn btn-danger btn-circle"><i class="fa fa-times"></button></div>';
+                var newField = '<div><div style="width:94%; float: left" id="cor">{!! Form::select("cores[]", \App\Models\Cor:: orderBy("nome")->pluck("nome", "id")->toArray(), null, ["class"=>"form-control", "required", "placeholder"=>"Selecione uma cor"]) !!}</div><button type="button" class="remove field btn btn-danger btn-circle"><i class="fa fa-times"></button></div>';
 
 
 
@@ -85,7 +85,7 @@
             $(add_button2).click(function(e){
                 x2++;
 
-                var newField2 = '<div><div style="width:94%; float: left" id="processo">{!! Form::select("processos [1", \App\Models\Processo:: orderBy("nome")->pluck("nome", "id")->toArray(), null, ["class"=>"form-control", "required", "placeholder"=>"Selecione um processo"]) !!}</div><button type="button" class="remove field btn btn-danger btn-circle"><i class="fa fa-times"></button></div>';
+                var newField2 = '<div><div style="width:94%; float: left" id="processo">{!! Form::select("processos[]", \App\Models\Processo:: orderBy("nome")->pluck("nome", "id")->toArray(), null, ["class"=>"form-control", "required", "placeholder"=>"Selecione um processo"]) !!}</div><button type="button" class="remove field btn btn-danger btn-circle"><i class="fa fa-times"></button></div>';
 
 
 

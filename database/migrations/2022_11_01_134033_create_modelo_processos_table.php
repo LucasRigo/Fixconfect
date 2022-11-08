@@ -14,7 +14,15 @@ class CreateModeloProcessosTable extends Migration
     public function up()
     {
         Schema::create('modelo_processos', function (Blueprint $table) {
-            $table->id();
+            
+            $table->bigIncrements('id');
+
+            $table->bigInteger('modelo_id')->unsigned()->nullable();
+            $table->foreign('modelo_id')->references('id')->on('modelos');
+
+            $table->bigInteger('processo_id')->unsigned()->nullable();
+            $table->foreign('processo_id')->references('id')->on('processos');
+
             $table->timestamps();
         });
     }

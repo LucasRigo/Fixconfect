@@ -35,7 +35,7 @@
                     </td>
                     <td>
 
-                        <a href="{{ route('modelos.edit', ['id' => $modelo->id]) }}" class="btn-sm btn-success">Editar</a>
+                        
                         <a href="#" onclick="return ConfirmaExclusao({{$modelo->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
                 </tr>

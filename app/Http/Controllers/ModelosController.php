@@ -11,7 +11,7 @@ use Symfony\Component\Process\Process;
 class ModelosController extends Controller
 {
     public function index(){
-        $modelos = Modelo::All();
+        $modelos = Modelo::all();
         return view('modelos.index', ['modelos'=>$modelos]);
     }
 
@@ -25,7 +25,7 @@ class ModelosController extends Controller
             'referencia' => $request->get('referencia'),
         ]);
 
-        $cores = $request->cors;
+        $cores = $request->cores;
         foreach($cores as $a => $value) {
             ModeloCor::create([
                 'modelo_id' => $modelo->id,
