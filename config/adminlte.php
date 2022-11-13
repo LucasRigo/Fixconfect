@@ -294,32 +294,32 @@ return [
         [
             'text'         => 'Processos',
             'url'         => 'processos',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-tasks',
         ],
         [
             'text'         => 'Aparelhos',
             'url'         => 'aparelhos',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-cogs',
         ],
         [
             'text'         => 'Linhas',
             'url'         => 'linhas',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-tag',
         ],
         [
             'text'         => 'Terceirizados',
             'url'         => 'terceirizados',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-user-plus',
         ],
         [
             'text'         => 'Cores',
             'url'         => 'cores',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-adjust',
         ],
         [
             'text'         => 'Modelos',
             'url'         => 'modelos',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-file',
         ],
         
     ],

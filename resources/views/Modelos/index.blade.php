@@ -46,5 +46,5 @@
 @stop
 
 @section('table-delete')
-"cores"
+"modelos"
 @endsection
