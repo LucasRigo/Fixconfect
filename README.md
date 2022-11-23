@@ -74,6 +74,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 -Retrabalho
 -Aparelho
 -Processo
+-Cor
 
 
 ## Ordem
@@ -118,4 +119,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Retrabalho
 -id
 -referencia_id
+
+## Cor
+-id
+-nome
 
